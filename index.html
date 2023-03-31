@@ -79,9 +79,8 @@
       </ul>
     </div>
   </nav>
-
   <div class="ml-[260px] bg-zinc-50 min-h-screen">
-    <header class="w-full h-14 bg-white shadow-sm px-5 py-2.5 flex justify-between items-center sticky top-0">
+    <header class="w-full h-14 bg-white shadow-sm px-5 py-2.5 flex justify-between items-center sticky top-0 relative">
       <form class="relative">
         <input type="text"
           class="peer border border-gray-200 rounded-md py-2 pl-9 pr-4 placeholder:text-sm placeholder:font-medium outline-none focus:border-primary"
@@ -90,25 +89,96 @@
             class="fa-regular fa-magnifying-glass"></i></label>
       </form>
       <div class="flex gap-3">
-        <div
-          class="h-9 w-9 rounded-full flex items-center justify-center bg-slate-100 hover:bg-slate-200 hover:text-primary">
+        <div id="darkModeBtn"
+          class="h-9 w-9 rounded-full flex items-center justify-center bg-slate-100 hover:bg-slate-200 hover:text-primary cursor-pointer">
           <i class="fa-regular fa-sun-bright"></i>
         </div>
         <div
-          class="h-9 w-9 rounded-full flex items-center justify-center bg-slate-100 hover:bg-slate-200 hover:text-primary">
+          class="h-9 w-9 rounded-full flex items-center justify-center bg-slate-100 hover:bg-slate-200 hover:text-primary cursor-pointer">
           <img class="h-6 w-6" src="./img/icons8-usa-48.png" alt="usa">
         </div>
-        <div
-          class="h-9 w-9 rounded-full flex items-center justify-center bg-slate-100 hover:bg-slate-200 hover:text-primary">
+        <div id="notiDropdown" data-noti="5"
+          class="relative light h-9 w-9 rounded-full flex items-center justify-center bg-slate-100 hover:bg-slate-200 hover:text-primary cursor-pointer">
+          <!-- before:content-[attr(data-noti)] before:w-4 before:h-4 before:absolute before:text-white before:bg-rose-500 before:rounded-full before:text-xs before:text-center before:top-0 before:-right-1 -->
           <i class="fa-sharp fa-regular fa-bell"></i>
         </div>
-        <div
-          class="h-10 w-10 rounded-full flex items-center justify-center bg-slate-100 hover:bg-slate-200 hover:text-primary">
-          <img class="w-full h-full object-cover rounded-full"
+        <div id="avatarDropdown"
+          class="relative w-fit rounded-full flex items-center justify-center bg-slate-100 cursor-pointer">
+          <img class="h-10 w-10 object-cover rounded-full"
             src="./img/pretty-smiling-joyfully-female-with-fair-hair-dressed-casually-looking-with-satisfaction.jpg"
             alt="avartar">
         </div>
       </div>
+      <!-- Dropdown -->
+      <div id="avatarDropdownMenu" class="shadow bg-white rounded absolute top-16 right-6 transition hidden">
+        <ul>
+          <li class="p-4">
+            <div class="flex items-center gap-3">
+              <img class="block w-10 h-10 rounded-md object-cover"
+                src="./img/pretty-smiling-joyfully-female-with-fair-hair-dressed-casually-looking-with-satisfaction.jpg"
+                alt="ava">
+              <div>
+                <h4 class="text-base">Irene Collins</h4>
+                <p class="text-xs text-gray-400 block w-full">irenecollins@gmail.com</p>
+              </div>
+            </div>
+          </li>
+          <li class="hover:bg-sky-50 group">
+            <a class="px-4 py-2 text-sm block group-hover:text-primary" href="">
+              <span class="mr-2"><i class="fa-regular fa-user"></i></span>
+              Profile
+            </a>
+          </li>
+          <li class="hover:bg-sky-50 group">
+            <a class="px-4 py-2 text-sm block group-hover:text-primary" href="">
+              <span class="mr-2"><i class="fa-regular fa-envelope"></i></span>
+              Inbox
+            </a>
+          </li>
+          <li class="hover:bg-sky-50 group">
+            <a class="px-4 py-2 text-sm block group-hover:text-primary" href="">
+              <span class="mr-2"><i class="fa-regular fa-lock"></i></span>
+              Lock Screen
+            </a>
+          </li>
+        </ul>
+        <div class="px-4 py-3 border-t-2 text-sm text-rose-500 rounded-b-md hover:bg-sky-50 hover:text-primary">
+          <span class="mr-2"><i class="fa-regular fa-arrow-right-from-bracket"></i></span>
+          Sign Out
+        </div>
+      </div>
+      <!--  -->
+      <div id="notiDropdownMenu"
+        class="w-[350px] bg-white rounded shadow absolute top-16 right-20 transition-all hidden">
+        <h4 class="text-base px-4 py-2 font-medium border-b">Notification</h4>
+        <ul>
+          <li class="flex items-center gap-2 text-sm px-4 py-2 border-b">
+            <div class="text-3xl h-12 w-12 flex items-center justify-center rounded-full bg-rose-100 text-rose-500">
+              <i class="fa-sharp fa-regular fa-xmark"></i>
+            </div>
+            <div>
+              <p> Your request <span class="font-semibold">#4554</span> has been declined</p>
+              <span class="text-xs text-gray-400">4 min ago</span>
+            </div>
+          </li>
+          <li class="flex items-center gap-2 text-sm px-4 py-2 border-b">
+            <div class="text-3xl h-12 w-12 flex items-center justify-center rounded-full bg-green-100 text-green-500">
+              <i class="fa-regular fa-check"></i>
+            </div>
+            <div>
+              <p> Your request <span class="font-semibold">#4554</span> has been accepted</p>
+              <span class="text-xs text-gray-400">9h ago</span>
+            </div>
+          </li>
+        </ul>
+        <div class="p-4">
+          <button
+            class="rounded-md bg-primary text-white text-sm px-4 py-2 w-full shadow-md drop-shadow-xl shadow-primary hover:shadow-none">
+            Read All Notifications
+          </button>
+        </div>
+      </div>
+      <!-- End Dropdown -->
     </header>
 
     <main class="p-6">
@@ -140,7 +210,7 @@
         </ol>
       </nav>
       <!-- Total -->
-      <div class="grid grid-cols-4 gap-4 mb-6">
+      <section class="grid grid-cols-4 gap-4 mb-6">
         <div
           class="h-36 text-white rounded-md shadow p-5 flex items-center justify-center gap-5 bg-gradient-to-r from-cyan-500 to-cyan-400">
           <h3 class="text-6xl"><i class="fa-solid fa-sack-dollar"></i></h3>
@@ -167,15 +237,15 @@
         </div>
         <div
           class="h-36 text-white rounded-md shadow p-5 flex items-center justify-center gap-5 bg-gradient-to-r from-fuchsia-500 to-fuchsia-400">
-          <h3 class="text-6xl"><i class="fa-solid fa-arrow-right-from-bracket"></i></h3>
+          <h3 class="text-6xl"><i class="fa-solid fa-hand"></i></h3>
           <div>
             <h4 class="text-3xl font-semibold">3654</h4>
             <span class="">Stationery Used</span>
           </div>
         </div>
-      </div>
+      </section>
       <!-- Chart -->
-      <div class="grid grid-cols-3 gap-4 mb-6">
+      <section class="grid grid-cols-3 gap-4 mb-6">
         <div class="col-span-2 bg-white rounded-md shadow p-5">
           <h2 class="text-lg font-medium py-3">Line chart</h2>
           <canvas id="lineChart"></canvas>
@@ -184,9 +254,9 @@
           <h2 class="text-lg font-medium py-3">Donut chart</h2>
           <canvas id="donutChart"></canvas>
         </div>
-      </div>
+      </section>
       <!-- Recent -->
-      <div class="grid grid-cols-2 gap-4">
+      <section class="grid grid-cols-2 gap-4">
 
         <div class="relative overflow-x-auto bg-white rounded-md shadow p-5">
           <h2 class="text-lg font-medium pb-3">Recent request</h2>
@@ -325,7 +395,6 @@
                 <th scope="col" class="px-6 py-3">
                   Money
                 </th>
-
               </tr>
             </thead>
             <tbody>
@@ -398,7 +467,7 @@
             </tbody>
           </table>
         </div>
-      </div>
+      </section>
     </main>
   </div>
 </body>

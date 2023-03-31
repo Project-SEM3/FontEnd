@@ -37,6 +37,7 @@ new Chart(lineChart, {
 		],
 	},
 	options: {
+		tension: 0.4,
 		borderWidth: 2,
 		scales: {
 			y: {
