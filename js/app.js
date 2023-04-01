@@ -27,6 +27,7 @@ document.addEventListener("click", function (event) {
 if (darkModeBtn) {
 	darkModeBtn.addEventListener("click", () => {
 		darkModeBtn.classList.toggle("light");
+		document.body.classList.toggle("dark");
 		if (darkModeBtn.classList.contains("light")) {
 			darkModeBtn.innerHTML = '<i class="fa-regular fa-moon"></i>';
 		} else {

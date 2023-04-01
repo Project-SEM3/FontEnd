@@ -4,7 +4,10 @@ tailwind.config = {
 		extend: {
 			colors: {
 				primary: "rgb(0,173,239)",
-				focus: "rgb(0,90,169)",
+				dark: "#0e1726",
+				darkDeep: "#060818",
+				darkText: "#888ea8",
+				darkDropDown: "#1B2E4B",
 			},
 			minWidth: {
 				260: "260px",
