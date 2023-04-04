@@ -1,0 +1,554 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>HMT Technologies </title>
+  <link rel="icon" type="image/png" href="./img/Logo-Stage.png">
+  <!-- Tailwind -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="./js/tailwind.config.js"></script>
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="./css//fontawesome-pro-6.1.0-web/css/all.min.css">
+  <script src="./css/fontawesome-pro-6.1.0-web/js/all.min.js"></script>
+  <!-- Chart Js -->
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <!-- Css -->
+  <link rel="stylesheet" href="./css/style.css">
+</head>
+
+<body class="font-primary">
+  <!-- Loading -->
+  <div id="loading" class="z-[1000000] fixed top-0 bottom-0 left-0 right-0 bg-gray-100 opacity-85 animate-bounce ">
+    <div class="w-screen h-screen flex items-center justify-center">
+      <div role="status">
+        <svg aria-hidden="true"
+          class="inline w-10 h-10 mr-2 text-gray-200 animate-spin dark:text-gray-600 fill-blue-600"
+          viewBox="0 0 100 101" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path
+            d="M100 50.5908C100 78.2051 77.6142 100.591 50 100.591C22.3858 100.591 0 78.2051 0 50.5908C0 22.9766 22.3858 0.59082 50 0.59082C77.6142 0.59082 100 22.9766 100 50.5908ZM9.08144 50.5908C9.08144 73.1895 27.4013 91.5094 50 91.5094C72.5987 91.5094 90.9186 73.1895 90.9186 50.5908C90.9186 27.9921 72.5987 9.67226 50 9.67226C27.4013 9.67226 9.08144 27.9921 9.08144 50.5908Z"
+            fill="currentColor" />
+          <path
+            d="M93.9676 39.0409C96.393 38.4038 97.8624 35.9116 97.0079 33.5539C95.2932 28.8227 92.871 24.3692 89.8167 20.348C85.8452 15.1192 80.8826 10.7238 75.2124 7.41289C69.5422 4.10194 63.2754 1.94025 56.7698 1.05124C51.7666 0.367541 46.6976 0.446843 41.7345 1.27873C39.2613 1.69328 37.813 4.19778 38.4501 6.62326C39.0873 9.04874 41.5694 10.4717 44.0505 10.1071C47.8511 9.54855 51.7191 9.52689 55.5402 10.0491C60.8642 10.7766 65.9928 12.5457 70.6331 15.2552C75.2735 17.9648 79.3347 21.5619 82.5849 25.841C84.9175 28.9121 86.7997 32.2913 88.1811 35.8758C89.083 38.2158 91.5421 39.6781 93.9676 39.0409Z"
+            fill="currentFill" />
+        </svg>
+        <span class="sr-only">Loading...</span>
+      </div>
+    </div>
+  </div>
+  <nav
+    class="min-w-260 h-screen bg-white shadow-lg shadow-gray-300 overflow-y-auto fixed top-0 left-0 bottom-0 z-[1000] dark:bg-dark dark:shadow-slate-700 dark:shadow">
+    <div class="flex items-center justify-center py-3">
+      <img class="h-20" src="./img/Logo-Stage.png" alt="logo">
+    </div>
+    <div class="">
+      <ul class="px-4 dark:text-slate-500">
+        <li class="hover:bg-neutral-200 rounded-md group dark:hover:bg-slate-800">
+          <a class="p-2.5 text-sm font-normal block" href="./index.html">
+            <span class="pr-3 text-lg group-hover:text-primary">
+              <i class="fa-duotone fa-house-chimney"></i>
+            </span>
+            Dashboard
+          </a>
+        </li>
+        <li class="hover:bg-neutral-200 rounded-md group dark:hover:bg-slate-800">
+          <a class="p-2.5 text-sm font-normal block" href="./login.html">
+            <span class="pr-3 text-lg group-hover:text-primary">
+              <i class="fa-duotone fa-right-to-bracket"></i>
+            </span>
+            Login
+          </a>
+        </li>
+      </ul>
+    </div>
+    <div class="">
+      <h2 class="font-semibold h-full bg-neutral-100 p-2.5 pl-6 dark:bg-opacity-[0.05] dark:text-darkText">
+        Employee</h2>
+      <ul class="px-4 dark:text-slate-500">
+        <li class="hover:bg-neutral-200 rounded-md group dark:hover:bg-slate-800">
+          <a class="p-2.5 text-sm font-normal block" href="./request.html">
+            <span class="pr-3 text-lg group-hover:text-primary">
+              <i class="fa-duotone fa-file-plus"></i>
+            </span>
+            Request
+          </a>
+        </li>
+        <li class="hover:bg-neutral-200 rounded-md group dark:hover:bg-slate-800">
+          <a class="p-2.5 text-sm font-normal block" href="./myRequest.html">
+            <span class="pr-3 text-lg group-hover:text-primary">
+              <i class="fa-duotone fa-clipboard-list"></i>
+            </span>
+            My Request
+          </a>
+        </li>
+        <li class="hover:bg-neutral-200 rounded-md group dark:hover:bg-slate-800">
+          <a class="p-2.5 text-sm font-normal block" href="./profile.html">
+            <span class="pr-3 text-lg group-hover:text-primary">
+              <i class="fa-duotone fa-user"></i>
+            </span>
+            Profile
+          </a>
+        </li>
+        <li class="hover:bg-neutral-200 rounded-md group dark:hover:bg-slate-800">
+          <a class="p-2.5 text-sm font-normal block" href="./changePassword.html">
+            <span class="pr-3 text-lg group-hover:text-primary">
+              <i class="fa-duotone fa-lock"></i>
+            </span>
+            Change Password
+          </a>
+        </li>
+        <li class="hover:bg-neutral-200 rounded-md group dark:hover:bg-slate-800">
+          <a class="p-2.5 text-sm font-normal block" href="">
+            <span class="pr-3 text-lg group-hover:text-primary">
+              <i class="fa-duotone fa-bell"></i>
+            </span>
+            Notification
+          </a>
+        </li>
+        <li class="hover:bg-neutral-200 rounded-md group dark:hover:bg-slate-800">
+          <a class="p-2.5 text-sm font-normal block" href="">
+            <span class="pr-3 text-lg group-hover:text-primary">
+              <i class="fa-duotone fa-message-pen"></i>
+            </span>
+            Feedback
+          </a>
+        </li>
+      </ul>
+    </div>
+    <div class="">
+      <h2 class="font-semibold h-full bg-neutral-100 p-2.5 pl-6 dark:bg-opacity-[0.05] dark:text-darkText">
+        Manager</h2>
+      <ul class="px-4 dark:text-slate-500">
+        <li class="hover:bg-neutral-200 rounded-md group dark:hover:bg-slate-800">
+          <a class="p-2.5 text-sm font-normal block" href="./account.html">
+            <span class="pr-3 text-lg group-hover:text-primary">
+              <i class="fa-duotone fa-address-card"></i>
+            </span>
+            Account
+          </a>
+        </li>
+        <li class="hover:bg-neutral-200 rounded-md group dark:hover:bg-slate-800">
+          <a class="p-2.5 text-sm font-normal block" href="">
+            <span class="pr-3 text-lg group-hover:text-primary">
+              <i class="fa-duotone fa-file-check"></i>
+            </span>
+            Manage Requests
+          </a>
+        </li>
+        <li class="hover:bg-neutral-200 rounded-md group dark:hover:bg-slate-800">
+          <a class="p-2.5 text-sm font-normal block" href="">
+            <span class="pr-3 text-lg group-hover:text-primary">
+              <i class="fa-duotone fa-message-dots"></i>
+            </span>
+            Manage Feedback
+          </a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+  <div class="ml-[260px] bg-zinc-50 min-h-screen dark:bg-darkDeep">
+    <header
+      class="w-full h-14 bg-white shadow-sm px-5 py-2.5 flex justify-between items-center sticky top-0 relative dark:bg-dark z-50">
+      <form class="relative">
+        <input type="text"
+          class="peer border border-gray-200 rounded-md py-2 pl-9 pr-4 placeholder:text-sm placeholder:font-medium outline-none focus:border-primary dark:bg-slate-800 dark:border-slate-900 dark:text-white dark:focus:border-primary"
+          placeholder="Search...">
+        <label class="text-slate-400 absolute top-1/2 left-3 -translate-y-2/4 peer-focus:text-primary"><i
+            class="fa-regular fa-magnifying-glass"></i></label>
+      </form>
+      <div class="flex gap-3 dark:text-white">
+        <div id="darkModeBtn"
+          class="h-9 w-9 rounded-full flex items-center justify-center bg-slate-100 dark:bg-slate-700 hover:bg-slate-200 hover:text-primary cursor-pointer">
+          <i class="fa-regular fa-sun-bright"></i>
+        </div>
+        <div
+          class="h-9 w-9 rounded-full flex items-center justify-center bg-slate-100 dark:bg-slate-700 hover:bg-slate-200 hover:text-primary cursor-pointer">
+          <img class="h-6 w-6" src="./img/icons8-usa-48.png" alt="usa">
+        </div>
+        <div id="notiDropdown" data-noti="5"
+          class="relative light h-9 w-9 rounded-full flex items-center justify-center bg-slate-100 dark:bg-slate-700 hover:bg-slate-200 hover:text-primary cursor-pointer ">
+          <!-- before:content-[attr(data-noti)] before:w-4 before:h-4 before:absolute before:text-white before:bg-rose-500 before:rounded-full before:text-xs before:text-center before:top-0 before:-right-1 -->
+          <i class="fa-sharp fa-regular fa-bell"></i>
+        </div>
+        <div id="avatarDropdown"
+          class="relative w-fit rounded-full flex items-center justify-center bg-slate-100 cursor-pointer">
+          <img class="h-10 w-10 object-cover rounded-full"
+            src="./img/pretty-smiling-joyfully-female-with-fair-hair-dressed-casually-looking-with-satisfaction.jpg"
+            alt="avartar">
+        </div>
+      </div>
+      <!-- Dropdown -->
+      <div id="avatarDropdownMenu"
+        class="shadow bg-white rounded absolute top-16 right-6 transition hidden dark:bg-darkDropDown">
+        <ul class=" dark:text-gray-400">
+          <li class="p-4">
+            <div class="flex items-center gap-3">
+              <img class="block w-10 h-10 rounded-md object-cover"
+                src="./img/pretty-smiling-joyfully-female-with-fair-hair-dressed-casually-looking-with-satisfaction.jpg"
+                alt="ava">
+              <div>
+                <h4 class="text-base dark:text-gray-400">Irene Collins</h4>
+                <p class="text-xs text-gray-400 block w-full dark:text-gray-500">irenecollins@gmail.com</p>
+              </div>
+            </div>
+          </li>
+          <li class="hover:bg-sky-50 group dark:hover:bg-slate-700">
+            <a class="px-4 py-2 text-sm block group-hover:text-primary" href="">
+              <span class="mr-2"><i class="fa-regular fa-user"></i></span>
+              Profile
+            </a>
+          </li>
+          <li class="hover:bg-sky-50 group dark:hover:bg-slate-700">
+            <a class="px-4 py-2 text-sm block group-hover:text-primary" href="">
+              <span class="mr-2"><i class="fa-regular fa-envelope"></i></span>
+              Inbox
+            </a>
+          </li>
+          <li class="hover:bg-sky-50 group dark:hover:bg-slate-700">
+            <a class="px-4 py-2 text-sm block group-hover:text-primary" href="">
+              <span class="mr-2"><i class="fa-regular fa-lock"></i></span>
+              Lock Screen
+            </a>
+          </li>
+        </ul>
+        <div
+          class="px-4 py-3 border-t text-sm text-rose-500 rounded-b-md hover:bg-sky-50 hover:text-primary dark:border-slate-700 dark:hover:bg-slate-700">
+          <span class="mr-2"><i class="fa-regular fa-arrow-right-from-bracket"></i></span>
+          Sign Out
+        </div>
+      </div>
+      <!--  -->
+      <div id="notiDropdownMenu"
+        class="w-[350px] bg-white rounded shadow absolute top-16 right-20 transition-all hidden dark:bg-darkDropDown">
+        <h4 class="text-base px-4 py-2 font-medium border-b dark:border-b-slate-700 dark:text-white">Notification</h4>
+        <ul class="dark:text-gray-400">
+          <li class="flex items-center gap-2 text-sm px-4 py-2 border-b dark:border-b-slate-700">
+            <div
+              class="text-3xl h-12 w-12 flex items-center justify-center rounded-full basis-1/6 bg-rose-100 text-rose-500">
+              <i class="fa-sharp fa-regular fa-xmark"></i>
+            </div>
+            <div class="basis-5/6">
+              <p> Your request <span class="font-semibold">#4554</span> has been declined</p>
+              <span class="text-xs text-gray-400 dark:text-gray-500">4 min ago</span>
+            </div>
+          </li>
+          <li class="flex items-center gap-2 text-sm px-4 py-2 border-b dark:border-b-slate-700">
+            <div
+              class="text-3xl h-12 w-12 flex items-center justify-center rounded-full basis-1/6 bg-green-100 text-green-500">
+              <i class="fa-regular fa-check"></i>
+            </div>
+            <div class="basis-5/6">
+              <p> Your request <span class="font-semibold">#4554</span> has been accepted</p>
+              <span class="text-xs text-gray-400 dark:text-gray-500">9h ago</span>
+            </div>
+          </li>
+        </ul>
+        <div class="p-4">
+          <button
+            class="rounded-md bg-primary text-white text-sm px-4 py-2 w-full shadow-md drop-shadow-xl shadow-primary hover:shadow-none">
+            Read All Notifications
+          </button>
+        </div>
+      </div>
+      <!-- End Dropdown -->
+    </header>
+
+    <main class="p-6">
+      <!-- Breadcrumb -->
+      <nav class="flex mb-6" aria-label="Breadcrumb">
+        <ol class="inline-flex items-center space-x-1">
+          <li class="inline-flex items-center">
+            <a href="#"
+              class="inline-flex items-center text-sm font-medium text-gray-700 hover:text-primary dark:text-gray-400">
+              <svg aria-hidden="true" class="w-4 h-4 mr-2" fill="currentColor" viewBox="0 0 20 20"
+                xmlns="http://www.w3.org/2000/svg">
+                <path
+                  d="M10.707 2.293a1 1 0 00-1.414 0l-7 7a1 1 0 001.414 1.414L4 10.414V17a1 1 0 001 1h2a1 1 0 001-1v-2a1 1 0 011-1h2a1 1 0 011 1v2a1 1 0 001 1h2a1 1 0 001-1v-6.586l.293.293a1 1 0 001.414-1.414l-7-7z">
+                </path>
+              </svg>
+              Home
+            </a>
+          </li>
+          <li aria-current="page">
+            <div class="flex items-center">
+              <svg aria-hidden="true" class="w-6 h-6 text-gray-400" fill="currentColor" viewBox="0 0 20 20"
+                xmlns="http://www.w3.org/2000/svg">
+                <path fill-rule="evenodd"
+                  d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z"
+                  clip-rule="evenodd"></path>
+              </svg>
+              <span class="ml-1 text-sm font-medium text-gray-500">Dashboard</span>
+            </div>
+          </li>
+        </ol>
+      </nav>
+      <!-- Total -->
+      <section class="grid grid-cols-4 gap-4 mb-6">
+        <div
+          class="h-36 text-white rounded-md shadow p-5 flex items-center justify-center gap-5 bg-gradient-to-r from-cyan-500 to-cyan-400">
+          <h3 class="text-6xl"><i class="fa-solid fa-sack-dollar"></i></h3>
+          <div>
+            <h4 class="text-3xl font-semibold">$1754.5</h4>
+            <span class="">Amount Spent</span>
+          </div>
+        </div>
+        <div
+          class="h-36 text-white rounded-md shadow p-5 flex items-center justify-center gap-5 bg-gradient-to-r from-violet-500 to-violet-400">
+          <h3 class="text-6xl"><i class="fa-solid fa-up-right-from-square"></i></h3>
+          <div>
+            <h4 class="text-3xl font-semibold">3235</h4>
+            <span class="">Request</span>
+          </div>
+        </div>
+        <div
+          class="h-36 text-white rounded-md shadow p-5 flex items-center justify-center gap-5 bg-gradient-to-r from-blue-500 to-blue-400">
+          <h3 class="text-6xl"><i class="fa-sharp fa-solid fa-pen-nib"></i></h3>
+          <div>
+            <h4 class="text-3xl font-semibold">3886</h4>
+            <span class="">Stationery</span>
+          </div>
+        </div>
+        <div
+          class="h-36 text-white rounded-md shadow p-5 flex items-center justify-center gap-5 bg-gradient-to-r from-fuchsia-500 to-fuchsia-400">
+          <h3 class="text-6xl"><i class="fa-solid fa-hand"></i></h3>
+          <div>
+            <h4 class="text-3xl font-semibold">3654</h4>
+            <span class="">Stationery Used</span>
+          </div>
+        </div>
+      </section>
+      <!-- Chart -->
+      <section class="grid grid-cols-3 gap-4 mb-6">
+        <div class="col-span-2 bg-white rounded-md shadow p-5 dark:bg-dark">
+          <h2 class="text-lg font-medium py-3 dark:text-white">Line chart</h2>
+          <canvas id="lineChart"></canvas>
+        </div>
+        <div class="bg-white rounded-md shadow p-5 dark:bg-dark">
+          <h2 class="text-lg font-medium py-3 dark:text-white">Donut chart</h2>
+          <canvas id="donutChart"></canvas>
+        </div>
+      </section>
+      <!-- Recent -->
+      <section class="grid grid-cols-2 gap-4">
+
+        <div class="relative overflow-x-auto bg-white rounded-md shadow p-5 dark:bg-dark">
+          <h2 class="text-lg font-medium pb-3 dark:text-white">Recent request</h2>
+          <table class="w-full text-sm text-left text-gray-500 dark:text-gray-400">
+            <thead class="text-xs text-gray-700 uppercase bg-gray-100 rounded-md dark:bg-gray-700 dark:text-gray-400">
+              <tr>
+                <th scope="col" class="px-6 py-3">
+                  Employee
+                </th>
+                <th scope="col" class="px-6 py-3">
+                  Request
+                </th>
+                <th scope="col" class="px-6 py-3">
+                  Quantity
+                </th>
+                <th scope="col" class="px-6 py-3">
+                  Status
+                </th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr class="bg-white border-b dark:bg-gray-800 dark:border-gray-700">
+                <th scope="row" class="px-6 py-4 whitespace-nowrap">
+                  <div class="flex items-center justify-start">
+                    <img class="h-8 w-8 rounded-md object-cover"
+                      src="./img/pretty-smiling-joyfully-female-with-fair-hair-dressed-casually-looking-with-satisfaction.jpg"
+                      alt="">
+                    <span class="text-sm font-normal pl-3">Luke Ivory</span>
+                  </div>
+                </th>
+                <td class="px-6 py-4">
+                  #7465
+                </td>
+                <td class="px-6 py-4">
+                  5
+                </td>
+                <td class="px-6 py-4">
+                  <div class="rounded-md py-0.5 text-center bg-blue-100 border-2 border-blue-400 text-blue-500">Pending
+                  </div>
+                </td>
+              </tr>
+              <tr class="bg-white border-b dark:bg-gray-800 dark:border-gray-700">
+                <th scope="row" class="px-6 py-4 whitespace-nowrap">
+                  <div class="flex items-center justify-start">
+                    <img class="h-8 w-8 rounded-md object-cover" src="./img/nicolas-horn-MTZTGvDsHFY-unsplash.jpg"
+                      alt="">
+                    <span class="text-sm font-normal pl-3">Andy King</span>
+                  </div>
+                </th>
+                <td class="px-6 py-4">
+                  #46566
+                </td>
+                <td class="px-6 py-4">
+                  8
+                </td>
+                <td class="px-6 py-4">
+                  <div class="rounded-md py-0.5 text-center bg-green-100 border-2 border-green-400 text-green-500">
+                    Completed
+                  </div>
+                </td>
+              </tr>
+              <tr class="bg-white border-b dark:bg-gray-800 dark:border-gray-700">
+                <th scope="row" class="px-6 py-4 whitespace-nowrap">
+                  <div class="flex items-center justify-start">
+                    <img class="h-8 w-8 rounded-md object-cover"
+                      src="./img/lifestyle-beauty-fashion-people-emotions-concept-young-asian-female-office-manager-ceo-with-pleased-expression-standing-white-background-smiling-with-arms-crossed-chest.jpg"
+                      alt="">
+                    <span class="text-sm font-normal pl-3">Laurie Fox</span>
+                  </div>
+                </th>
+                <td class="px-6 py-4">
+                  #6454
+                </td>
+                <td class="px-6 py-4">
+                  12
+                </td>
+                <td class="px-6 py-4">
+                  <div class="rounded-md py-0.5 text-center bg-stone-100 border-2 border-stone-400 text-stone-500">
+                    Accepted
+                  </div>
+                </td>
+              </tr>
+              <tr class="bg-white border-b dark:bg-gray-800 dark:border-gray-700">
+                <th scope="row" class="px-6 py-4 whitespace-nowrap">
+                  <div class="flex items-center justify-start">
+                    <img class="h-8 w-8 rounded-md object-cover" src="./img/julian-wan-WNoLnJo7tS8-unsplash.jpg" alt="">
+                    <span class="text-sm font-normal pl-3">Ryan Collins</span>
+                  </div>
+                </th>
+                <td class="px-6 py-4">
+                  #2344
+                </td>
+                <td class="px-6 py-4">
+                  3
+                </td>
+                <td class="px-6 py-4">
+                  <div class="rounded-md py-0.5 text-center bg-rose-100 border-2 border-rose-400 text-rose-500">Reject
+                  </div>
+                </td>
+              </tr>
+              <tr class="bg-white border-b dark:bg-gray-800 dark:border-gray-700">
+                <th scope="row" class="px-6 py-4 whitespace-nowrap">
+                  <div class="flex items-center justify-start">
+                    <img class="h-8 w-8 rounded-md object-cover"
+                      src="./img/portrait-young-asia-lady-with-positive-expression-arms-crossed-smile-broadly-dressed-casual-clothing-looking-camera-pink-background.jpg"
+                      alt="">
+                    <span class="text-sm font-normal pl-3">Irene Collins</span>
+                  </div>
+                </th>
+                <td class="px-6 py-4">
+                  #7465
+                </td>
+                <td class="px-6 py-4">
+                  9
+                </td>
+                <td class="px-6 py-4">
+                  <div class="rounded-md py-0.5 text-center bg-stone-100 border-2 border-stone-400 text-stone-500">
+                    Accepted
+                  </div>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="relative overflow-x-auto bg-white rounded-md shadow p-5 dark:bg-dark">
+          <h2 class="text-lg font-medium pb-3 dark:text-white">Top stationery request</h2>
+          <table class="w-full text-sm text-left text-gray-500 dark:text-gray-400">
+            <thead class="text-xs text-gray-700 uppercase bg-gray-100 rounded-md dark:bg-gray-700 dark:text-gray-400">
+              <tr>
+                <th scope="col" class="px-6 py-3">
+                  Stationery
+                </th>
+                <th scope="col" class="px-6 py-3">
+                  Quantity
+                </th>
+                <th scope="col" class="px-6 py-3">
+                  Money
+                </th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr class="bg-white border-b dark:bg-gray-800 dark:border-gray-700">
+                <th scope="row" class="px-6 py-4 whitespace-nowrap font-normal">
+                  Pencil
+                </th>
+                <td class="px-6 py-4">
+                  465
+                </td>
+                <td class="px-6 py-4">
+                  $755
+                </td>
+              </tr>
+              <tr class="bg-white border-b dark:bg-gray-800 dark:border-gray-700">
+                <th scope="row" class="px-6 py-4 whitespace-nowrap font-normal">
+                  Pencil
+                </th>
+                <td class="px-6 py-4">
+                  465
+                </td>
+                <td class="px-6 py-4">
+                  $755
+                </td>
+              </tr>
+              <tr class="bg-white border-b dark:bg-gray-800 dark:border-gray-700">
+                <th scope="row" class="px-6 py-4 whitespace-nowrap font-normal">
+                  Pencil
+                </th>
+                <td class="px-6 py-4">
+                  465
+                </td>
+                <td class="px-6 py-4">
+                  $755
+                </td>
+              </tr>
+              <tr class="bg-white border-b dark:bg-gray-800 dark:border-gray-700">
+                <th scope="row" class="px-6 py-4 whitespace-nowrap font-normal">
+                  Pencil
+                </th>
+                <td class="px-6 py-4">
+                  465
+                </td>
+                <td class="px-6 py-4">
+                  $755
+                </td>
+              </tr>
+              <tr class="bg-white border-b dark:bg-gray-800 dark:border-gray-700">
+                <th scope="row" class="px-6 py-4 whitespace-nowrap font-normal">
+                  Pencil
+                </th>
+                <td class="px-6 py-4">
+                  465
+                </td>
+                <td class="px-6 py-4">
+                  $755
+                </td>
+              </tr>
+              <tr class="bg-white border-b dark:bg-gray-800 dark:border-gray-700">
+                <th scope="row" class="px-6 py-4 whitespace-nowrap font-normal">
+                  Pencil
+                </th>
+                <td class="px-6 py-4">
+                  465
+                </td>
+                <td class="px-6 py-4">
+                  $755
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+    </main>
+  </div>
+</body>
+<!-- Chart -->
+<script src="./js/chartRen.js"></script>
+<!-- JS -->
+<script src="./js/app.js"></script>
+
+</html>
