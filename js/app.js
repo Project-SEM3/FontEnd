@@ -8,6 +8,7 @@ const avatarEditImg = document.getElementById("avatarEditImg");
 const hiddenPass = document.querySelectorAll(".hiddenPass");
 const requestStationery = document.getElementById("requestStationery");
 const requestStationeryBtn = document.getElementById("requestStationeryBtn");
+const loading = document.getElementById("loading");
 
 if (avatarDropdownMenu && avatarDropdown) {
 	avatarDropdown.addEventListener("click", () => {
@@ -124,3 +125,7 @@ if (requestStationery) {
 
 	deteleRequestRow();
 }
+
+window.addEventListener("load", () => {
+	loading.classList.add("hidden");
+});
