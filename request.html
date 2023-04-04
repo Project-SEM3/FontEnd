@@ -213,118 +213,72 @@
                   d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z"
                   clip-rule="evenodd"></path>
               </svg>
-              <span class="ml-1 text-sm font-medium text-gray-500">Profile</span>
+              <span class="ml-1 text-sm font-medium text-gray-500">Request</span>
             </div>
           </li>
         </ol>
       </nav>
 
       <!-- Main change -->
-      <section class="w-full rounded-md bg-white shadow p-5 dark:bg-dark mb-6">
-        <h3 class="font-medium text-lg pb-5 dark:text-white">General Information</h3>
-        <form action="" class="grid grid-cols-5 gap-5">
-          <div class="flex justify-center">
-            <div class="relative h-fit">
-              <img id="avatarEditImg" class="h-36 w-36 rounded-full object-cover"
-                src="./img/julian-wan-WNoLnJo7tS8-unsplash.jpg" alt="avartar">
-              <label for="avatarEdit"
-                class="w-10 h-10 rounded-full flex items-center justify-center cursor-pointer bg-gray-100 shadow-md hover:bg-gray-200 absolute bottom-0 right-0 dark:text-gray-300 dark:bg-gray-500 dark:hover:bg-gray-600">
-                <i class="fa-solid fa-pen"></i>
-              </label>
-            </div>
-            <input id="avatarEdit" type="file" class="hidden">
-          </div>
-          <div class="col-span-4">
-            <div class="grid grid-cols-2 gap-5">
-              <div class="mb-6">
-                <label for="email" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Email</label>
-                <input type="email" id="email"
-                  class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg outline-none focus:border-primary block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
-                  placeholder="Enter email" required>
-              </div>
-              <div class="mb-6">
-                <label for="phone" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Phone</label>
-                <input type="text" id="phone"
-                  class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg outline-none focus:border-primary block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
-                  placeholder="vd: 098587656" required>
-              </div>
-              <div class="mb-6">
-                <label for="fullName" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Full
-                  Name</label>
-                <input type="text" id="fullName"
-                  class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg outline-none focus:border-primary block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
-                  placeholder="Enter full name" required>
-              </div>
-              <div class="mb-6">
-                <label for="address"
-                  class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Address</label>
-                <input type="text" id="address"
-                  class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg outline-none focus:border-primary block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
-                  placeholder="Enter address" required>
+      <section class="mb-6 rounded-md shadow bg-white w-full p-5 dark:bg-dark">
+        <div class="flex items-center justify-between">
+          <h3 class="text-lg font-medium dark:text-white mb-3">Request to buy stationery</h3>
+          <button type="button"
+            class="py-2 px-5 rounded border border-primary font-medium hover:bg-gray-100 dark:bg-gray-700 dark:hover:bg-gray-600 dark:text-white"
+            id="requestStationeryBtn">
+            <span><i class="fa-solid fa-plus"></i></span>
+            Add stationery
+          </button>
+        </div>
+        <form action="" class="mt-5">
+          <div id="requestStationery">
+            <div class="grid grid-cols-5 gap-3 mb-6">
+              <div>
+                <label for="" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Select
+                  stationery</label>
+                <select name="category"
+                  class="outline-none bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:border-primary block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500">
+                  <option value="tt">Pen</option>
+                  <option value="tt3">Paper</option>
+                  <option value="tt4">Ruler</option>
+                  <option value="tt5">Notebook</option>
+                </select>
               </div>
               <div>
-                <button type="submit"
-                  class="text-white py-2 px-12 rounded-md bg-primary text-sm hover:bg-sky-600">Save</button>
+                <label for="" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Select
+                  stationery type</label>
+                <select name="typeCategory"
+                  class="outline-none bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:border-primary block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500">
+                  <option value="465">Pencil</option>
+                  <option>Ballpoint pens</option>
+                  <option>Ink pen</option>
+                  <option>Eraser pen</option>
+                </select>
+              </div>
+              <div>
+                <label for="" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Quantity</label>
+                <input name="quantity" type="number"
+                  class="bg-gray-50 border border-gray-300 text-gray-900 outline-none text-sm rounded-lg focus:border-primary block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                  placeholder="0" required min="1">
+              </div>
+              <div>
+                <label for="" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Note</label>
+                <input name="note" type="text"
+                  class="bg-gray-50 border border-gray-300 text-gray-900 outline-none text-sm rounded-lg focus:border-primary block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                  placeholder="Vd: Thien Long Pen">
+              </div>
+              <div class="flex flex-col items-center">
+                <h5 class="block mb-2 text-sm font-medium text-gray-900 dark:text-white text-center">Action</h5>
+                <button type="button"
+                  class="text-white rounded-md bg-rose-500 py-2 px-10 hover:bg-rose-700 deleteRequest">Delete</button>
               </div>
             </div>
           </div>
-        </form>
-      </section>
-      <!-- Change pass -->
-      <section class="w-full">
-        <div class="w-full rounded-md bg-white shadow p-5 dark:bg-dark">
-          <h3 class="font-medium text-lg pb-5 dark:text-white">Social</h3>
-          <div class="grid grid-cols-2 gap-5">
-            <div class="mb-6 flex ">
-              <label for="faceSocial"
-                class="block bg-gray-200 rounded-md w-14 mr-2 flex items-center justify-center text-lg dark:text-white dark:bg-gray-500"><i
-                  class="fa-brands fa-facebook-f"></i></label>
-              <input type="text" id="faceSocial"
-                class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg outline-none focus:border-primary block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
-                placeholder="@robert_honer">
-            </div>
-            <div class="mb-6 flex ">
-              <label for="gitSocial"
-                class="block bg-gray-200 rounded-md w-14 mr-2 flex items-center justify-center text-lg dark:text-white dark:bg-gray-500"><i
-                  class="fa-brands fa-github"></i></label>
-              <input type="text" id="gitSocial"
-                class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg outline-none focus:border-primary block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
-                placeholder="@robert_honer">
-            </div>
-            <div class="mb-6 flex ">
-              <label for="twiterSocial"
-                class="block bg-gray-200 rounded-md w-14 mr-2 flex items-center justify-center text-lg dark:text-white dark:bg-gray-500"><i
-                  class="fa-brands fa-twitter"></i></label>
-              <input type="text" id="twiterSocial"
-                class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg outline-none focus:border-primary block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
-                placeholder="@robert_honer">
-            </div>
-            <div class="mb-6 flex ">
-              <label for="linkedSocial"
-                class="block bg-gray-200 rounded-md w-14 mr-2 flex items-center justify-center text-lg dark:text-white dark:bg-gray-500"><i
-                  class="fa-brands fa-linkedin"></i></label>
-              <input type="text" id="linkedSocial"
-                class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg outline-none focus:border-primary block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
-                placeholder="@robert_honer">
-            </div>
-            <div class="mb-6 flex ">
-              <label for="linkedSocial"
-                class="block bg-gray-200 rounded-md w-14 mr-2 flex items-center justify-center text-lg dark:text-white dark:bg-gray-500"><i
-                  class="fa-brands fa-telegram"></i></label>
-              <input type="text" id="linkedSocial"
-                class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg outline-none focus:border-primary block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
-                placeholder="@robert_honer">
-            </div>
-            <div class="mb-6 flex ">
-              <label for="linkedSocial"
-                class="block bg-gray-200 rounded-md w-14 mr-2 flex items-center justify-center text-lg dark:text-white dark:bg-gray-500"><i
-                  class="fa-brands fa-skype"></i></label>
-              <input type="text" id="linkedSocial"
-                class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg outline-none focus:border-primary block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
-                placeholder="@robert_honer">
-            </div>
+          <div class="flex items-center justify-center mt-12">
+            <button class="py-3 px-16 font-medium bg-primary hover:bg-sky-600 rounded-md text-white">Request <span
+                class="ml-2"><i class="fa-solid fa-up-right-from-square"></i></span></button>
           </div>
-        </div>
+        </form>
       </section>
       <!-- Main change end -->
 
