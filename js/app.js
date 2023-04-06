@@ -9,6 +9,12 @@ const hiddenPass = document.querySelectorAll(".hiddenPass");
 const requestStationery = document.getElementById("requestStationery");
 const requestStationeryBtn = document.getElementById("requestStationeryBtn");
 const loading = document.getElementById("loading");
+const passCheck = document.getElementById("passCheck");
+const rePassCheck = document.getElementById("rePassCheck");
+const alertPass = document.getElementById("alertPass");
+const btnSubmit = document.getElementById("btnSubmit");
+const btnDeleteAccount = document.querySelectorAll(".btnDelete");
+const btnCloseModalAcc = document.querySelectorAll(".btnCloseModalAcc");
 
 if (avatarDropdownMenu && avatarDropdown) {
 	avatarDropdown.addEventListener("click", () => {
@@ -129,3 +135,36 @@ if (requestStationery) {
 window.addEventListener("load", () => {
 	loading.classList.add("hidden");
 });
+
+if (passCheck) {
+	function checkPassMatch() {
+		if (passCheck.value !== rePassCheck.value) {
+			alertPass.classList.remove("hidden");
+			btnSubmit.classList.add("opacity-30", "cursor-not-allowed");
+			btnSubmit.type = "button";
+		} else {
+			alertPass.classList.add("hidden");
+			btnSubmit.classList.remove("opacity-30", "cursor-not-allowed");
+			btnSubmit.type = "submit";
+		}
+	}
+	rePassCheck.addEventListener("blur", () => {
+		checkPassMatch();
+	});
+	passCheck.addEventListener("blur", () => {
+		checkPassMatch();
+	});
+}
+
+if (btnDeleteAccount) {
+	btnDeleteAccount.forEach((btn) => {
+		btn.addEventListener("click", () => {
+			btn.nextElementSibling.classList.remove("hidden");
+		});
+	});
+	btnCloseModalAcc.forEach((btn) => {
+		btn.addEventListener("click", () => {
+			btn.parentNode.parentNode.parentNode.parentNode.classList.add("hidden");
+		});
+	});
+}
