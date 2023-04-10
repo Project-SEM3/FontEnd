@@ -71,45 +71,46 @@ if (hiddenPass) {
 
 if (requestStationery) {
 	let innerStationery = `
-		<div>
-			<label for='' class='block mb-2 text-sm font-medium text-gray-900 dark:text-white'>Select
-				stationery</label>
-			<select name='category'
-				class='outline-none bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:border-primary block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500'>
-				<option value='tt'>Pen</option>
-				<option value='tt3'>Paper</option>
-				<option value='tt4'>Ruler</option>
-				<option value='tt5'>Notebook</option>
-			</select>
-		</div>
-		<div>
-			<label for='' class='block mb-2 text-sm font-medium text-gray-900 dark:text-white'>Select
-				stationery type</label>
-			<select name='typeCategory'
-				class='outline-none bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:border-primary block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500'>
-				<option value='465'>Pencil</option>
-				<option>Ballpoint pens</option>
-				<option>Ink pen</option>
-				<option>Eraser pen</option>
-			</select>
-		</div>
-		<div>
-			<label for='' class='block mb-2 text-sm font-medium text-gray-900 dark:text-white'>Quantity</label>
-			<input name='quantity' type='number'
-				class='bg-gray-50 border border-gray-300 text-gray-900 outline-none text-sm rounded-lg focus:border-primary block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500'
-				placeholder='0' required min='1'>
-		</div>
-		<div>
-			<label for='' class='block mb-2 text-sm font-medium text-gray-900 dark:text-white'>Note</label>
-			<input name='note' type='text'
-				class='bg-gray-50 border border-gray-300 text-gray-900 outline-none text-sm rounded-lg focus:border-primary block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500'
-				placeholder='Vd: Thien Long Pen'>
-		</div>
-		<div class="flex flex-col items-center">
-                <h5 class="block mb-2 text-sm font-medium text-gray-900 dark:text-white text-center">Action</h5>
-                <button type="button"
-                  class="text-white rounded-md bg-rose-500 py-2 px-10 hover:bg-rose-700 deleteRequest">Delete</button>
-              </div>`;
+	<div class="col-span-2">
+	<label for="" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Select
+		stationery</label>
+	<select name="category"
+		class="outline-none bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:border-primary block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500">
+		<option value="tt">Pen</option>
+		<option value="tt3">Paper</option>
+		<option value="tt4">Ruler</option>
+		<option value="tt5">Notebook</option>
+	</select>
+</div>
+<div class="col-span-3">
+	<label for="" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Select
+		stationery type</label>
+	<select name="typeCategory"
+		class="outline-none bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:border-primary block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500">
+		<option value="465">Pencil</option>
+		<option>Ballpoint pens</option>
+		<option>Ink pen</option>
+		<option>Eraser pen</option>
+	</select>
+</div>
+<div>
+	<label for="" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Quantity</label>
+	<input name="quantity" type="number"
+		class="bg-gray-50 border border-gray-300 text-gray-900 outline-none text-sm rounded-lg focus:border-primary block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+		placeholder="0" required min="1">
+</div>
+<div class="col-span-3">
+	<label for="" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Note</label>
+	<input name="note" type="text"
+		class="bg-gray-50 border border-gray-300 text-gray-900 outline-none text-sm rounded-lg focus:border-primary block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+		placeholder="Vd: Thien Long Pen">
+</div>
+<div class="flex flex-col items-center ">
+	<h5 class="block mb-2 text-sm font-medium text-gray-900 dark:text-white text-center">Action</h5>
+	<button type="button"
+		class="text-white rounded-md bg-rose-500 py-2 px-4 hover:bg-rose-700 deleteRequest">Delete</button>
+</div>
+</div>`;
 
 	function deteleRequestRow() {
 		let btnDeleteStationery = document.querySelectorAll(".deleteRequest");
@@ -123,7 +124,7 @@ if (requestStationery) {
 
 	requestStationeryBtn.addEventListener("click", () => {
 		let newStationery = document.createElement("div");
-		newStationery.className = "grid grid-cols-5 gap-3 mb-6";
+		newStationery.className = "grid grid-cols-10 gap-3 mb-6";
 		newStationery.innerHTML = innerStationery;
 		requestStationery.appendChild(newStationery);
 		deteleRequestRow();
