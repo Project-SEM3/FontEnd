@@ -15,6 +15,7 @@ const alertPass = document.getElementById("alertPass");
 const btnSubmit = document.getElementById("btnSubmit");
 const btnDeleteAccount = document.querySelectorAll(".btnDelete");
 const btnCloseModalAcc = document.querySelectorAll(".btnCloseModalAcc");
+const totalTitle = document.querySelectorAll(".totalTitle");
 
 if (avatarDropdownMenu && avatarDropdown) {
 	avatarDropdown.addEventListener("click", () => {
@@ -166,6 +167,20 @@ if (btnDeleteAccount) {
 	btnCloseModalAcc.forEach((btn) => {
 		btn.addEventListener("click", () => {
 			btn.parentNode.parentNode.parentNode.parentNode.classList.add("hidden");
+		});
+	});
+}
+
+if (totalTitle) {
+	totalTitle.forEach((item) => {
+		item.addEventListener("click", () => {
+			item.nextElementSibling.classList.toggle("hidden");
+			console.dir(item.children);
+			if (item.nextElementSibling.classList.contains("hidden")) {
+				item.children[1].innerHTML = '<i class="fa-solid fa-chevron-down"></i>';
+			} else {
+				item.children[1].innerHTML = '<i class="fa-solid fa-chevron-up"></i>';
+			}
 		});
 	});
 }
