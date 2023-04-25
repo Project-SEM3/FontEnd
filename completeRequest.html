@@ -21,7 +21,7 @@
 
 <body class="font-primary">
   <nav
-    class="min-w-260 h-screen bg-white shadow-lg shadow-gray-300 overflow-y-auto fixed top-0 left-0 bottom-0 z-[1000] dark:bg-dark dark:shadow-slate-700 dark:shadow">
+       class="min-w-260 h-screen bg-white shadow-lg shadow-gray-300 overflow-y-auto fixed top-0 left-0 bottom-0 z-[1000] dark:bg-dark dark:shadow-slate-700 dark:shadow">
     <div class="flex items-center justify-center py-3">
       <img class="h-20" src="./img/Logo-Stage.png" alt="logo">
     </div>
@@ -84,44 +84,44 @@
   </nav>
   <div class="ml-[260px] bg-zinc-50 min-h-screen dark:bg-darkDeep">
     <header
-      class="w-full h-14 bg-white shadow-sm px-5 py-2.5 flex justify-between items-center sticky top-0 relative dark:bg-dark z-50">
+            class="w-full h-14 bg-white shadow-sm px-5 py-2.5 flex justify-between items-center sticky top-0 relative dark:bg-dark z-50">
       <form class="relative">
         <input type="text"
-          class="peer border border-gray-200 rounded-md py-2 pl-9 pr-4 placeholder:text-sm placeholder:font-medium outline-none focus:border-primary dark:bg-slate-800 dark:border-slate-900 dark:text-white dark:focus:border-primary"
-          placeholder="Search...">
+               class="peer border border-gray-200 rounded-md py-2 pl-9 pr-4 placeholder:text-sm placeholder:font-medium outline-none focus:border-primary dark:bg-slate-800 dark:border-slate-900 dark:text-white dark:focus:border-primary"
+               placeholder="Search...">
         <label class="text-slate-400 absolute top-1/2 left-3 -translate-y-2/4 peer-focus:text-primary"><i
-            class="fa-regular fa-magnifying-glass"></i></label>
+             class="fa-regular fa-magnifying-glass"></i></label>
       </form>
       <div class="flex gap-3 dark:text-white">
         <div id="darkModeBtn"
-          class="h-9 w-9 rounded-full flex items-center justify-center bg-slate-100 dark:bg-slate-700 hover:bg-slate-200 hover:text-primary cursor-pointer">
+             class="h-9 w-9 rounded-full flex items-center justify-center bg-slate-100 dark:bg-slate-700 hover:bg-slate-200 hover:text-primary cursor-pointer">
           <i class="fa-regular fa-sun-bright"></i>
         </div>
         <div
-          class="h-9 w-9 rounded-full flex items-center justify-center bg-slate-100 dark:bg-slate-700 hover:bg-slate-200 hover:text-primary cursor-pointer">
+             class="h-9 w-9 rounded-full flex items-center justify-center bg-slate-100 dark:bg-slate-700 hover:bg-slate-200 hover:text-primary cursor-pointer">
           <img class="h-6 w-6" src="./img/icons8-usa-48.png" alt="usa">
         </div>
         <div id="notiDropdown" data-noti="5"
-          class="relative light h-9 w-9 rounded-full flex items-center justify-center bg-slate-100 dark:bg-slate-700 hover:bg-slate-200 hover:text-primary cursor-pointer">
+             class="relative light h-9 w-9 rounded-full flex items-center justify-center bg-slate-100 dark:bg-slate-700 hover:bg-slate-200 hover:text-primary cursor-pointer">
           <!-- before:content-[attr(data-noti)] before:w-4 before:h-4 before:absolute before:text-white before:bg-rose-500 before:rounded-full before:text-xs before:text-center before:top-0 before:-right-1 -->
           <i class="fa-sharp fa-regular fa-bell"></i>
         </div>
         <div id="avatarDropdown"
-          class="relative w-fit rounded-full flex items-center justify-center bg-slate-100 cursor-pointer">
+             class="relative w-fit rounded-full flex items-center justify-center bg-slate-100 cursor-pointer">
           <img class="h-10 w-10 object-cover rounded-full"
-            src="./img/pretty-smiling-joyfully-female-with-fair-hair-dressed-casually-looking-with-satisfaction.jpg"
-            alt="avartar">
+               src="./img/pretty-smiling-joyfully-female-with-fair-hair-dressed-casually-looking-with-satisfaction.jpg"
+               alt="avartar">
         </div>
       </div>
       <!-- Dropdown -->
       <div id="avatarDropdownMenu"
-        class="shadow bg-white rounded absolute top-16 right-6 transition hidden dark:bg-darkDropDown">
+           class="shadow bg-white rounded absolute top-16 right-6 transition hidden dark:bg-darkDropDown">
         <ul class=" dark:text-gray-400">
           <li class="p-4">
             <div class="flex items-center gap-3">
               <img class="block w-10 h-10 rounded-md object-cover"
-                src="./img/pretty-smiling-joyfully-female-with-fair-hair-dressed-casually-looking-with-satisfaction.jpg"
-                alt="ava">
+                   src="./img/pretty-smiling-joyfully-female-with-fair-hair-dressed-casually-looking-with-satisfaction.jpg"
+                   alt="ava">
               <div>
                 <h4 class="text-base dark:text-gray-400">Irene Collins</h4>
                 <p class="text-xs text-gray-400 block w-full dark:text-gray-500">irenecollins@gmail.com</p>
@@ -148,19 +148,19 @@
           </li>
         </ul>
         <div
-          class="px-4 py-3 border-t text-sm text-rose-500 rounded-b-md hover:bg-sky-50 hover:text-primary dark:border-slate-700 dark:hover:bg-slate-700">
+             class="px-4 py-3 border-t text-sm text-rose-500 rounded-b-md hover:bg-sky-50 hover:text-primary dark:border-slate-700 dark:hover:bg-slate-700">
           <span class="mr-2"><i class="fa-regular fa-arrow-right-from-bracket"></i></span>
           Sign Out
         </div>
       </div>
       <!--  -->
       <div id="notiDropdownMenu"
-        class="w-[350px] bg-white rounded shadow absolute top-16 right-20 transition-all hidden dark:bg-darkDropDown">
+           class="w-[350px] bg-white rounded shadow absolute top-16 right-20 transition-all hidden dark:bg-darkDropDown">
         <h4 class="text-base px-4 py-2 font-medium border-b dark:border-b-slate-700 dark:text-white">Notification</h4>
         <ul class="dark:text-gray-400">
           <li class="flex items-center gap-2 text-sm px-4 py-2 border-b dark:border-b-slate-700">
             <div
-              class="text-3xl h-12 w-12 flex items-center justify-center rounded-full basis-1/6 bg-rose-100 text-rose-500">
+                 class="text-3xl h-12 w-12 flex items-center justify-center rounded-full basis-1/6 bg-rose-100 text-rose-500">
               <i class="fa-sharp fa-regular fa-xmark"></i>
             </div>
             <div class="basis-5/6">
@@ -170,7 +170,7 @@
           </li>
           <li class="flex items-center gap-2 text-sm px-4 py-2 border-b dark:border-b-slate-700">
             <div
-              class="text-3xl h-12 w-12 flex items-center justify-center rounded-full basis-1/6 bg-green-100 text-green-500">
+                 class="text-3xl h-12 w-12 flex items-center justify-center rounded-full basis-1/6 bg-green-100 text-green-500">
               <i class="fa-regular fa-check"></i>
             </div>
             <div class="basis-5/6">
@@ -181,7 +181,7 @@
         </ul>
         <div class="p-4">
           <button
-            class="rounded-md bg-primary text-white text-sm px-4 py-2 w-full shadow-md drop-shadow-xl shadow-primary hover:shadow-none">
+                  class="rounded-md bg-primary text-white text-sm px-4 py-2 w-full shadow-md drop-shadow-xl shadow-primary hover:shadow-none">
             Read All Notifications
           </button>
         </div>
@@ -195,11 +195,11 @@
         <ol class="inline-flex items-center space-x-1">
           <li class="inline-flex items-center">
             <a href="#"
-              class="inline-flex items-center text-sm font-medium text-gray-700 hover:text-primary dark:text-gray-400">
+               class="inline-flex items-center text-sm font-medium text-gray-700 hover:text-primary dark:text-gray-400">
               <svg aria-hidden="true" class="w-4 h-4 mr-2" fill="currentColor" viewBox="0 0 20 20"
-                xmlns="http://www.w3.org/2000/svg">
+                   xmlns="http://www.w3.org/2000/svg">
                 <path
-                  d="M10.707 2.293a1 1 0 00-1.414 0l-7 7a1 1 0 001.414 1.414L4 10.414V17a1 1 0 001 1h2a1 1 0 001-1v-2a1 1 0 011-1h2a1 1 0 011 1v2a1 1 0 001 1h2a1 1 0 001-1v-6.586l.293.293a1 1 0 001.414-1.414l-7-7z">
+                      d="M10.707 2.293a1 1 0 00-1.414 0l-7 7a1 1 0 001.414 1.414L4 10.414V17a1 1 0 001 1h2a1 1 0 001-1v-2a1 1 0 011-1h2a1 1 0 011 1v2a1 1 0 001 1h2a1 1 0 001-1v-6.586l.293.293a1 1 0 001.414-1.414l-7-7z">
                 </path>
               </svg>
               Home
@@ -208,10 +208,10 @@
           <li aria-current="page">
             <div class="flex items-center">
               <svg aria-hidden="true" class="w-6 h-6 text-gray-400" fill="currentColor" viewBox="0 0 20 20"
-                xmlns="http://www.w3.org/2000/svg">
+                   xmlns="http://www.w3.org/2000/svg">
                 <path fill-rule="evenodd"
-                  d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z"
-                  clip-rule="evenodd"></path>
+                      d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z"
+                      clip-rule="evenodd"></path>
               </svg>
               <span class="ml-1 text-sm font-medium text-gray-500">Request</span>
             </div>
@@ -222,7 +222,7 @@
       <!-- Main change -->
       <section class="mb-6 rounded-md shadow bg-white w-full p-5 dark:bg-dark">
         <h3 class="font-medium text-lg pb-5 dark:text-white">Update price request (<span
-            class="font-semibold">#7567</span>)
+                class="font-semibold">#7567</span>)
         </h3>
         <div class="grid grid-cols-7 gap-3">
           <div class="col-span-3 flex flex-col items-center">
@@ -242,8 +242,8 @@
             <h5 class="font-medium mb-3 dark:text-white">To</h5>
             <div class="flex items-center">
               <img class="w-20 h-20 rounded-md object-cover"
-                src="./img/pretty-smiling-joyfully-female-with-fair-hair-dressed-casually-looking-with-satisfaction.jpg"
-                alt="ava">
+                   src="./img/pretty-smiling-joyfully-female-with-fair-hair-dressed-casually-looking-with-satisfaction.jpg"
+                   alt="ava">
               <div class="ml-5">
                 <h5 class="text-sm dark:text-white">Nguyen Van An</h5>
                 <span class="text-xs text-gray-400">nguyvanan@gmai.com</span>
@@ -290,12 +290,12 @@
                 <td class="px-6 py-4">
                   <div class="flex">
                     <span
-                      class="inline-flex items-center px-3 text-sm text-gray-900 bg-gray-200 border border-r-0 border-gray-300 rounded-l-md dark:bg-gray-600 dark:text-gray-400 dark:border-gray-600">
+                          class="inline-flex items-center px-3 text-sm text-gray-900 bg-gray-200 border border-r-0 border-gray-300 rounded-l-md dark:bg-gray-600 dark:text-gray-400 dark:border-gray-600">
                       $
                     </span>
-                    <input type="number" id="website-admin"
-                      class="max-w-[150px] rounded-none rounded-r-lg bg-gray-50 border border-gray-300 text-gray-900 outline-none focus:border-primary block flex-1 min-w-0 w-full text-sm p-2.5  dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
-                      placeholder="Price" required>
+                    <input type="text"
+                           class="priceComplete max-w-[150px] rounded-none rounded-r-lg bg-gray-50 border border-gray-300 text-gray-900 outline-none focus:border-primary block flex-1 min-w-0 w-full text-sm p-2.5  dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                           placeholder="VD: 3.46" required pattern="^\d+(\.\d+)?$">
                   </div>
                 </td>
               </tr>
@@ -315,12 +315,12 @@
                 <td class="px-6 py-4">
                   <div class="flex">
                     <span
-                      class="inline-flex items-center px-3 text-sm text-gray-900 bg-gray-200 border border-r-0 border-gray-300 rounded-l-md dark:bg-gray-600 dark:text-gray-400 dark:border-gray-600">
+                          class="inline-flex items-center px-3 text-sm text-gray-900 bg-gray-200 border border-r-0 border-gray-300 rounded-l-md dark:bg-gray-600 dark:text-gray-400 dark:border-gray-600">
                       $
                     </span>
                     <input type="text" id="website-admin"
-                      class="max-w-[150px] rounded-none rounded-r-lg bg-gray-50 border border-gray-300 text-gray-900 outline-none focus:border-primary block flex-1 min-w-0 w-full text-sm p-2.5  dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
-                      placeholder="Price">
+                           class="max-w-[150px] rounded-none rounded-r-lg bg-gray-50 border border-gray-300 text-gray-900 outline-none focus:border-primary block flex-1 min-w-0 w-full text-sm p-2.5  dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                           placeholder="Price">
                   </div>
                 </td>
               </tr>
@@ -340,12 +340,12 @@
                 <td class="px-6 py-4">
                   <div class="flex">
                     <span
-                      class="inline-flex items-center px-3 text-sm text-gray-900 bg-gray-200 border border-r-0 border-gray-300 rounded-l-md dark:bg-gray-600 dark:text-gray-400 dark:border-gray-600">
+                          class="inline-flex items-center px-3 text-sm text-gray-900 bg-gray-200 border border-r-0 border-gray-300 rounded-l-md dark:bg-gray-600 dark:text-gray-400 dark:border-gray-600">
                       $
                     </span>
                     <input type="text" id="website-admin"
-                      class="max-w-[150px] rounded-none rounded-r-lg bg-gray-50 border border-gray-300 text-gray-900 outline-none focus:border-primary block flex-1 min-w-0 w-full text-sm p-2.5  dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
-                      placeholder="Price">
+                           class="max-w-[150px] rounded-none rounded-r-lg bg-gray-50 border border-gray-300 text-gray-900 outline-none focus:border-primary block flex-1 min-w-0 w-full text-sm p-2.5  dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                           placeholder="Price">
                   </div>
                 </td>
               </tr>
@@ -365,12 +365,12 @@
                 <td class="px-6 py-4">
                   <div class="flex">
                     <span
-                      class="inline-flex items-center px-3 text-sm text-gray-900 bg-gray-200 border border-r-0 border-gray-300 rounded-l-md dark:bg-gray-600 dark:text-gray-400 dark:border-gray-600">
+                          class="inline-flex items-center px-3 text-sm text-gray-900 bg-gray-200 border border-r-0 border-gray-300 rounded-l-md dark:bg-gray-600 dark:text-gray-400 dark:border-gray-600">
                       $
                     </span>
                     <input type="text" id="website-admin"
-                      class="max-w-[150px] rounded-none rounded-r-lg bg-gray-50 border border-gray-300 text-gray-900 outline-none focus:border-primary block flex-1 min-w-0 w-full text-sm p-2.5  dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
-                      placeholder="Price">
+                           class="max-w-[150px] rounded-none rounded-r-lg bg-gray-50 border border-gray-300 text-gray-900 outline-none focus:border-primary block flex-1 min-w-0 w-full text-sm p-2.5  dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                           placeholder="Price">
                   </div>
                 </td>
               </tr>
@@ -390,12 +390,12 @@
                 <td class="px-6 py-4">
                   <div class="flex">
                     <span
-                      class="inline-flex items-center px-3 text-sm text-gray-900 bg-gray-200 border border-r-0 border-gray-300 rounded-l-md dark:bg-gray-600 dark:text-gray-400 dark:border-gray-600">
+                          class="inline-flex items-center px-3 text-sm text-gray-900 bg-gray-200 border border-r-0 border-gray-300 rounded-l-md dark:bg-gray-600 dark:text-gray-400 dark:border-gray-600">
                       $
                     </span>
                     <input type="text" id="website-admin"
-                      class="max-w-[150px] rounded-none rounded-r-lg bg-gray-50 border border-gray-300 text-gray-900 outline-none focus:border-primary block flex-1 min-w-0 w-full text-sm p-2.5  dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
-                      placeholder="Price">
+                           class="max-w-[150px] rounded-none rounded-r-lg bg-gray-50 border border-gray-300 text-gray-900 outline-none focus:border-primary block flex-1 min-w-0 w-full text-sm p-2.5  dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                           placeholder="Price">
                   </div>
                 </td>
               </tr>
@@ -415,12 +415,12 @@
                 <td class="px-6 py-4">
                   <div class="flex">
                     <span
-                      class="inline-flex items-center px-3 text-sm text-gray-900 bg-gray-200 border border-r-0 border-gray-300 rounded-l-md dark:bg-gray-600 dark:text-gray-400 dark:border-gray-600">
+                          class="inline-flex items-center px-3 text-sm text-gray-900 bg-gray-200 border border-r-0 border-gray-300 rounded-l-md dark:bg-gray-600 dark:text-gray-400 dark:border-gray-600">
                       $
                     </span>
                     <input type="text" id="website-admin"
-                      class="max-w-[150px] rounded-none rounded-r-lg bg-gray-50 border border-gray-300 text-gray-900 outline-none focus:border-primary block flex-1 min-w-0 w-full text-sm p-2.5  dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
-                      placeholder="Price">
+                           class="max-w-[150px] rounded-none rounded-r-lg bg-gray-50 border border-gray-300 text-gray-900 outline-none focus:border-primary block flex-1 min-w-0 w-full text-sm p-2.5  dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                           placeholder="Price">
                   </div>
                 </td>
               </tr>
