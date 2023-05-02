@@ -16,6 +16,9 @@ const btnSubmit = document.getElementById("btnSubmit");
 const btnDeleteAccount = document.querySelectorAll(".btnDelete");
 const btnCloseModalAcc = document.querySelectorAll(".btnCloseModalAcc");
 const totalTitle = document.querySelectorAll(".totalTitle");
+const fillter = document.getElementById("fillter");
+const fillterDropdown = document.getElementById("fillterDropdown");
+const fillterDropdownChild = document.querySelectorAll("#fillterDropdown li");
 
 if (avatarDropdownMenu && avatarDropdown) {
 	avatarDropdown.addEventListener("click", () => {
@@ -181,6 +184,17 @@ if (totalTitle) {
 			} else {
 				item.children[1].innerHTML = '<i class="fa-solid fa-chevron-up"></i>';
 			}
+		});
+	});
+}
+
+if (fillter && fillterDropdown) {
+	fillter.addEventListener("click", () => {
+		fillterDropdown.classList.toggle("hidden");
+	});
+	fillterDropdownChild.forEach((item) => {
+		item.addEventListener("click", () => {
+			fillterDropdown.classList.toggle("hidden");
 		});
 	});
 }
